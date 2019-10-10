@@ -6,7 +6,6 @@ module "vpc" {
   }
 
   name = "nx-vpc"
-
   cidr = "10.0.0.0/16"
 
   azs             = ["cn-northwest-1a", "cn-northwest-1b"]
@@ -25,10 +24,7 @@ module "vpc" {
   vpc_tags = {
     Name = "cmct-vpc"
   }
-
-
 }
-
 
 module "vpc-bj" {
   source = "../terraform-modules/terraform-aws-vpc/"
@@ -46,7 +42,6 @@ module "vpc-bj" {
   enable_nat_gateway = true
   single_nat_gateway = true
 
-
   tags = {
     Owner       = "cmct"
     Environment = "dev"
@@ -55,8 +50,6 @@ module "vpc-bj" {
   vpc_tags = {
     Name = "cmct-vpc"
   }
-
-
 }
 
 
