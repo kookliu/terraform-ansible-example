@@ -192,19 +192,24 @@ $ ls -al
 
 综上，对此有所理解后，我们的问题就是进行参数传递，有哪些功能呢？我们就来看当前我们使用的这个模块。
 
-| 代码                                                     | 含义说明                                               |
-| -------------------------------------------------------- | ------------------------------------------------------ |
-| module "vpc" {                                           | 意思定义了一个模块引用集合，名字是vpc，名字随便起。    |
-| source = "../terraform-modules/terraform-aws-vpc/"       | 真正引用的模块地址，执行这个模块下所有的.tf            |
-| providers = {<br/>    aws      = "aws.nx"<br/>  }        | 指定当前这个模块，使用的是项目组宁夏的Region来创建资源 |
-| cidr = "172.0.0.0/16"                                    | 参数传递                                               |
-| azs             = ["cn-northwest-1a", "cn-northwest-1b"] | 列表参数传递                                           |
+| 代码                                                         | 含义说明                                               |
+| ------------------------------------------------------------ | ------------------------------------------------------ |
+| module "vpc" {                                               | 意思定义了一个模块引用集合，名字是vpc，名字随便起。    |
+| source = "../terraform-modules/terraform-aws-vpc/"           | 真正引用的模块地址，执行这个模块下所有的.tf            |
+| providers = {<br/>    aws      = "aws.nx"<br/>  }            | 指定当前这个模块，使用的是项目组宁夏的Region来创建资源 |
+| cidr = "172.0.0.0/16"                                        | 参数传递 (string)                                      |
+| azs             = ["cn-northwest-1a", "cn-northwest-1b"]     | 列表参数传递 (list(string))                            |
+| tags = {<br/>    Owner       = "cmct"<br/>    Environment = "dev"<br/>  } | 映射参数传递map(string)                                |
 
    
 
+我们去这个模块的提供位置，去查看它可以使用的参数和输出，并且查看它调用的example，自己调整。
 
+https://github.com/terraform-aws-modules/terraform-aws-vpc
 
+查看使用的example:
 
+https://github.com/terraform-aws-modules/terraform-aws-vpc/tree/master/examples
 
 
 
