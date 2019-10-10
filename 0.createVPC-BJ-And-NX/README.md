@@ -64,7 +64,6 @@ module "vpc" {
   }
 
   name = "nx-vpc"
-
   cidr = "10.0.0.0/16"
 
   azs             = ["cn-northwest-1a", "cn-northwest-1b"]
@@ -74,7 +73,6 @@ module "vpc" {
   enable_nat_gateway = true
   single_nat_gateway = true
 
-
   tags = {
     Owner       = "cmct"
     Environment = "dev"
@@ -83,8 +81,6 @@ module "vpc" {
   vpc_tags = {
     Name = "cmct-vpc"
   }
-
-
 }
 
 
@@ -104,7 +100,6 @@ module "vpc-bj" {
   enable_nat_gateway = true
   single_nat_gateway = true
 
-
   tags = {
     Owner       = "cmct"
     Environment = "dev"
@@ -113,8 +108,6 @@ module "vpc-bj" {
   vpc_tags = {
     Name = "cmct-vpc"
   }
-
-
 }
 
 ```
@@ -199,7 +192,15 @@ $ ls -al
 
 综上，对此有所理解后，我们的问题就是进行参数传递，有哪些功能呢？我们就来看当前我们使用的这个模块。
 
+| 代码                                                     | 含义说明                                               |
+| -------------------------------------------------------- | ------------------------------------------------------ |
+| module "vpc" {                                           | 意思定义了一个模块引用集合，名字是vpc，名字随便起。    |
+| source = "../terraform-modules/terraform-aws-vpc/"       | 真正引用的模块地址，执行这个模块下所有的.tf            |
+| providers = {<br/>    aws      = "aws.nx"<br/>  }        | 指定当前这个模块，使用的是项目组宁夏的Region来创建资源 |
+| cidr = "172.0.0.0/16"                                    | 参数传递                                               |
+| azs             = ["cn-northwest-1a", "cn-northwest-1b"] | 列表参数传递                                           |
 
+   
 
 
 
