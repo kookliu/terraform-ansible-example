@@ -126,19 +126,19 @@ $ bash setup.sh
 
 
 
-### 0：目录：
+### 目录:   0.createVPC-BJ-And-NX/
 
 说明：这个目录其实本来不存在的，应要求加入的。这个其实就是简单VPC环境创建方法。创建VPC/Subnet/Route Table/Tags
 
 
 
-### 1：目录：
+### 目录:  1.
 
 说明： 这个目录实现的是一个全球应用架构的部署，在你国际账号里面你指定的每个Region创建一个应用。仅仅是为了演示如果做到全球部署的一种方式。
 
 
 
-### 2：目录：
+### Directory：
 
 说明：这个目录实现一个典型的LB + Auto Scaling Group的架构，AMI的创建，是使用Packer实现的。
 
@@ -163,4 +163,3 @@ $ bash setup.sh
 实际上还可以使用EIP来实现这个HA功能，目前这个版本的架构不支持。等后续有时间我再改进吧。
 
 ![Pacemake-DRBD-NFS-3](./image/Pacemake-DRBD-NFS-3.jpg)
-
