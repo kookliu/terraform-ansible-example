@@ -45,7 +45,7 @@ provider "aws" {
 
 第二段，代表我们之前创建的Project账户下的宁夏区，进行管理。
 
-第三段，实际是对我身账号的宁夏区进行管理。默认的情况下。
+第三段，实际是对我自身账号的宁夏区进行管理。默认的情况下。
 
 
 
@@ -125,13 +125,15 @@ module "vpc-bj" {
 
 首先我们来理解一下Terraform的主站内容。
 
+
+
+下面这个链接是Terraform介绍其基本语法的使用方法的。关于语法相关的部分，请在这个部分搜索。
+
 - https://www.terraform.io/docs/configuration/index.html
 
-这个链接是Terraform介绍其基本语法的使用方法的。关于语法相关的部分，请在这个部分搜索。
+下面这个链接是Provider为AWS时，里面资源使用的方法。
 
 - https://www.terraform.io/docs/providers/aws/index.html
-
-这个链接是Provider为AWS时，里面资源使用的方法。
 
 
 
