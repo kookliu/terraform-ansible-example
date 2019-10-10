@@ -162,5 +162,5 @@ $ bash setup.sh
 
 实际上还可以使用EIP来实现这个HA功能，目前这个版本的架构不支持。等后续有时间我再改进吧。
 
-![image-20191010230144168](/Users/jialj/Library/Application Support/typora-user-images/image-20191010230144168.png)
+![Pacemake-DRBD-NFS-3](./image/Pacemake-DRBD-NFS-3.jpg)
 
