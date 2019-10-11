@@ -1,0 +1,4 @@
+export SS_PASSWOR="thisisyourpassword"
+export AWS_AK="yourAWSAK"
+export AWS_SK="yourAWSSK"
+export REGION_LIST="ap-east-1 ap-northeast-1 ap-northeast-2"
