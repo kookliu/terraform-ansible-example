@@ -144,7 +144,7 @@ $ bash setup.sh
 
  ![LB-ASG-ARCH](./image/LB-ASG-ARCH.jpg)
 
-### 3: 目录：
+### 目录：3.
 
 说明：中国区一直没有落地EFS，这个场景是一个HA架构的NFS，使用的方案是Pacemaker + DRBD + NFS的，从使用效果来看，其实就是一个高可用的HA。这个是由开源作为解决方案的。实际上RedHat 和 SuSE都可以基于其HA产品，提供商业的解决方案。这里只是代表方案可行性。如果用于商业行为，需要保障，建议采用商业版本进行支持。整体是通过Terraform和Ansible进行集成实现的。
 
