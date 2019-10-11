@@ -543,3 +543,20 @@ $  terraform apply  -auto-approve
 
 
 
+
+
+
+
+## 检验结果：
+
+执行成功后，默认只会在ASG创建1台主机，找到LB的DNS Name，进行访问：
+
+例如： https://elb-example-291281982.ap-east-1.elb.amazonaws.com
+
+![LB-ASG-ARCH-WEB-1](../image/LB-ASG-ARCH-WEB-1.jpg)
+
+
+
+同时结合AWS Console观察EC2的create 和 terminal，也可以通过ASG查看：
+
+![LB-ASG-ARCH-Console-1](../image/LB-ASG-ARCH-Console-1.jpg)
