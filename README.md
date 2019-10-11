@@ -138,7 +138,7 @@ $ bash setup.sh
 
 
 
-### Directory：
+### 目录：2.createLB-ASG-HK
 
 说明：这个目录实现一个典型的LB + Auto Scaling Group的架构，AMI的创建，是使用Packer实现的。
 

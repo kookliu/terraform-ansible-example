@@ -1,0 +1,25 @@
+{
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "Your-AWS-Account-AK",
+      "secret_key": "Your-AWS-Account-SK",
+      "region": "ap-east-1",
+      "source_ami": "ami-570c7726",
+      "instance_type": "c5.large",
+      "ssh_username": "ec2-user",
+      "ami_name": "amaz2-stress {{timestamp}} by packer"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "file",
+      "source": "burn.tgz",
+      "destination": "/tmp/burn.tgz"
+    }, 
+    {
+      "type": "shell",
+      "script": "base_install.sh"
+    }
+  ]
+}
