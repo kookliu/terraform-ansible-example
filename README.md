@@ -80,8 +80,23 @@ $ bash setup.sh
 
   首先创建Policy, IAM->Policies->Create Policy
 
-  ![Operation-Account-IAM-Setp-1](./image/Operation-Account-IAM-Setp-1.jpg)
+  
 
+  ```json
+  {
+      "Version": "2012-10-17",
+      "Statement": {
+          "Effect": "Allow",
+          "Action": "sts:AssumeRole",
+          "Resource": [
+              "arn:aws-cn:iam::123456780001:role/terraform-assume-role"
+          ]
+      }
+  }
+  ```
+  
+  ![Operation-Account-IAM-Setp-1](./image/Operation-Account-IAM-Setp-1.jpg)
+  
   添加Policy Name: terraform-assume-policy, 后面我们会关联到terraform ec2 role里面。
 
 ![Operation-Account-IAM-Setp-2](./image/Operation-Account-IAM-Setp-2.jpg)
