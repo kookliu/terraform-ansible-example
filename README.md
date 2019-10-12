@@ -42,9 +42,9 @@ $ sudo curl -o /tmp/terraform.zip  https://releases.hashicorp.com/terraform/0.12
 
 $ sudo curl -o /tmp/packer.zip https://releases.hashicorp.com/packer/1.4.4/packer_1.4.4_linux_amd64.zip
 
-$ sudo unzip terraform.zip -d /usr/local/bin
+$ sudo unzip /tmp/terraform.zip -d /usr/local/bin
 
-$ sudo unzip packer.zip -d /usr/local/bin
+$ sudo unzip /tmp/packer.zip -d /usr/local/bin
 
 或者使用本目录中的setup.sh
 
